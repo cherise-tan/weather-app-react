@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// Import components for use in 'App' component
+import Titles from "./components/Titles";
+import Form from "./components/Form";
+import Weather from "./components/Weather";
 
+// initialise 'App' component
+class App extends React.Component {
+  // display data inside component (using JSX)
+  // nb can only return ONE PARENT ELEMENT (enclose within div to be safe)
+  render() {
+    return (
+      <div>
+        <Titles/>
+        <Form/>
+        <Weather/>
+      </div>
+     
+    );
+  }
+};
+
+// export 'App' so it can be used elsewhere
 export default App;
