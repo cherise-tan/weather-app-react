@@ -6,7 +6,9 @@ import Form from "./components/Form";
 import Weather from "./components/Weather";
 import { fsyncSync } from "fs";
 
-const API_KEY = "";
+require('dotenv').config();
+
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 // initialise 'App' component
 class App extends React.Component {
@@ -88,8 +90,3 @@ class App extends React.Component {
 
 // export 'App' so it can be used elsewhere
 export default App;
-
-
-
-
-
